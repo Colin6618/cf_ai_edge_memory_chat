@@ -12,7 +12,8 @@ An AI-powered chat app built entirely on Cloudflare using:
 
 ### Demo Screenshot
 <!-- Replace the path below with your actual screenshot file -->
-![Cloudflare AI Edge Memory Chat Demo](./docs/demo-screenshot.png)
+![Cloudflare AI Edge Memory Chat Demo](https://github.com/user-attachments/assets/cd862c5d-6d4d-4058-b930-9e7f014194c8)
+
 
 
 ### Run locally
