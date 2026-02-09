@@ -48,12 +48,12 @@ Notes:
 ### How it works (request flow)
 ```mermaid
 flowchart LR
-  UI[Browser UI (Vite + React)] -->|WebSocket| AGENT[Agents SDK / PartySocket]
-  AGENT -->|routeAgentRequest| WORKER[Cloudflare Worker]
-  WORKER -->|Durable Object| DO[MyAgent state & history]
-  DO -->|Embedding| AI[Workers AI]
-  DO -->|Upsert / Query| VEC[Vectorize]
+  UI["Browser UI"] -->|WebSocket| AGENT["Agents SDK"]
+  AGENT -->|routeAgentRequest| WORKER["Cloudflare Worker"]
+  WORKER -->|Durable Object| DO["MyAgent State and History"]
+  DO -->|Embedding| AI["Workers AI"]
+  DO -->|Upsert Query| VEC["Vectorize"]
   DO -->|Response| AGENT
   AGENT -->|Message| UI
-  DO -->|Schedule| WF[Workflows]
+  DO -->|Schedule| WF["Workflows"]
 ```
