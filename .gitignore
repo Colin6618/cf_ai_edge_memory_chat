@@ -1,0 +1,27 @@
+# Node
+node_modules/
+
+# Vite / build
+client/dist/
+dist/
+
+# Cloudflare Wrangler
+.wrangler/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Env
+.env
+.env.*
+.env.log
+
+# OS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
