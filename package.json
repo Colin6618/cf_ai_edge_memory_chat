@@ -1,5 +1,5 @@
 {
-  "name": "cloudflare-ai-edge-memory-chat",
+  "name": "cf_ai_edge_memory_chat",
   "version": "1.0.0",
   "scripts": {
     "dev": "wrangler dev",

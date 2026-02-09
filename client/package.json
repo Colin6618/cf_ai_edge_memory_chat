@@ -1,5 +1,5 @@
 {
-  "name": "cloudflare-ai-edge-memory-chat-client",
+  "name": "cf_ai_edge_memory_chat_client",
   "private": true,
   "version": "1.0.0",
   "type": "module",

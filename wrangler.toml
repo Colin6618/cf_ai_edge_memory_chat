@@ -1,0 +1,26 @@
+name = "cf_ai_edge_memory_chat"
+main = "src/server.ts"
+compatibility_date = "2025-11-01"
+compatibility_flags = ["nodejs_compat"]
+
+[durable_objects]
+bindings = [
+  { name = "MyAgent", class_name = "MyAgent" }
+]
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["MyAgent"]
+
+[ai]
+binding = "AI" # Workers AI binding
+remote = true
+
+[[vectorize]]
+binding = "MEMORY_INDEX"
+index_name = "agent-memory"
+
+[[workflows]]
+binding = "REMINDER_WORKFLOW"
+name = "REMINDER_WORKFLOW"
+class_name = "ReminderWorkflow"
