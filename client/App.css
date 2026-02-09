@@ -1,0 +1,147 @@
+:root {
+  font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+  color: #111;
+  background: #f5f7fb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(180deg, #eef3ff 0%, #f7f8fc 100%);
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.chat-panel {
+  width: min(760px, 100%);
+  height: min(760px, 90vh);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  background: #fff;
+  border: 1px solid #d7deeb;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.chat-header {
+  padding: 16px 18px;
+  border-bottom: 1px solid #e4e9f2;
+}
+
+.chat-header h1 {
+  margin: 0 0 6px;
+  font-size: 26px;
+}
+
+.chat-header p {
+  margin: 0;
+  color: #4c5972;
+}
+
+.chat-log {
+  overflow: auto;
+  padding: 16px;
+  display: grid;
+  gap: 10px;
+  align-content: start;
+}
+
+.empty-state {
+  margin: 6px 0 0;
+  color: #5b6680;
+}
+
+.chat-bubble {
+  max-width: 78%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #d8deeb;
+  background: #f7f9ff;
+}
+
+.chat-bubble.user {
+  justify-self: end;
+  background: #e8f2ff;
+  border-color: #c7dbff;
+}
+
+.chat-bubble.assistant {
+  justify-self: start;
+  background: #f7fff8;
+  border-color: #c8e8cc;
+}
+
+.chat-bubble.system {
+  justify-self: center;
+  max-width: 90%;
+  background: #fff8e8;
+  border-color: #f3d9a1;
+}
+
+.chat-bubble .label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #4f5f7c;
+}
+
+.chat-bubble p {
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+  line-height: 1.4;
+}
+
+.composer {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  padding: 14px;
+  border-top: 1px solid #e4e9f2;
+}
+
+.composer-actions {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 8px;
+}
+
+.composer input {
+  height: 44px;
+  border: 1px solid #bcc8de;
+  border-radius: 8px;
+  padding: 0 12px;
+  font-size: 16px;
+}
+
+.composer button {
+  height: 44px;
+  border: 1px solid #1d4ed8;
+  background: #2563eb;
+  color: #fff;
+  border-radius: 8px;
+  padding: 0 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.composer button:disabled {
+  opacity: 0.55;
+  cursor: default;
+}
+
+.composer button.secondary {
+  border-color: #b6bfd4;
+  background: #eef1f8;
+  color: #1c2a46;
+}
